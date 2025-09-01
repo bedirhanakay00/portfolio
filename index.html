@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bundle Works</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+            min-height: 100vh;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-style: italic;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .project-card {
+            background: rgba(30, 30, 30, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #f7fafc;
+        }
+
+        .project-description {
+            color: #a0aec0;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            background: #2d2d2d;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .embed-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .embed-section h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .embedded-project {
+            background: rgba(40, 40, 40, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .embedded-project h3 {
+            color: #f7fafc;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .embedded-project iframe {
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            background: #2d2d2d;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: rgba(100, 100, 100, 0.3);
+            color: #e2e8f0;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin: 5px 5px 0 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-iframe {
+                height: 250px;
+            }
+
+            .embedded-project iframe {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 My Bundle Works</h1>
+            <p>Cool stuff I've made for brands & campaigns</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-title">🎬 HBO Max - Moviedle</div>
+                <div class="project-description">
+                    A movie guessing game for HBO Max. Interactive entertainment that gets people engaged with their content catalog.
+                </div>
+                <iframe class="project-iframe" src="https://static.bundle.app/ads/046a0d4e-d163-4906-92a3-2b58434a7f51/index.html" title="HBO Max Moviedle"></iframe>
+                <div>
+                    <span class="tech-badge">Interactive Game</span>
+                    <span class="tech-badge">HTML/JS</span>
+                    <span class="tech-badge">HBO Max</span>
+                </div>
+                <br><br>
+                <a href="https://static.bundle.app/ads/046a0d4e-d163-4906-92a3-2b58434a7f51/index.html" target="_blank" class="project-link">View Full Project →</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">📱 Vodafone HR | Bundle AI</div>
+                <div class="project-description">
+                    An AI-powered interview experience for Vodafone. Interactive and engaging recruitment process tool.
+                </div>
+                <iframe class="project-iframe" src="https://static.bundle.app/ad-assets/vodafone-discover/b5108a6e-d1ea-4d1c-b1ee-d35bac2ff20e.html" title="Vodafone AI Interview"></iframe>
+                <div>
+                    <span class="tech-badge">AI Integration</span>
+                    <span class="tech-badge">Interactive</span>
+                    <span class="tech-badge">Vodafone</span>
+                </div>
+                <br><br>
+                <a href="https://static.bundle.app/ad-assets/vodafone-discover/b5108a6e-d1ea-4d1c-b1ee-d35bac2ff20e.html" target="_blank" class="project-link">View Full Project →</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">⚽ Bundle Arena</div>
+                <div class="project-description">
+                    Football bulletin/news format with interactive elements and real-time updates.
+                </div>
+                <iframe class="project-iframe" src="https://static.bundle.app/bundle-arena/htmls/28-08-2025.html" title="Bundle Arena Football"></iframe>
+                <div>
+                    <span class="tech-badge">Sports Content</span>
+                    <span class="tech-badge">News Format</span>
+                    <span class="tech-badge">Bundle Arena</span>
+                </div>
+                <br><br>
+                <a href="https://static.bundle.app/bundle-arena/htmls/28-08-2025.html" target="_blank" class="project-link">View Full Project →</a>
+            </div>
+        </div>
+
+        <div class="embed-section">
+            <h2>🚗 More Projects</h2>
+            
+            <div class="embedded-project">
+                <h3>BYD - Custom Masthead | Rich Media</h3>
+                <iframe src="byd-mastheadd.html" height="619px"></iframe>
+            </div>
+
+            <div class="embedded-project">
+                <h3>Akbank Wings Yılbaşı Campaign</h3>
+                <iframe src="akbankwingsyılbaşı.html" height="1138px"></iframe>
+            </div>
+
+            <div class="embedded-project">
+                <h3>Penti Yılbaşı Campaign</h3>
+                <iframe src="penti-yılbası.html" height="1138px"></iframe>
+            </div>
+
+            <div class="embedded-project">
+                <h3>Fellas Project</h3>
+                <iframe src="fellas.html" height="1138px"></iframe>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Made with ❤️ for showcasing Bundle creations</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">Personal portfolio • Not for commercial use</p>
+        </div>
+    </div>
+
+    <script>
+        // Add some fun interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add a subtle animation to project cards
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+
+            // Animate embedded projects too
+            const embeddedProjects = document.querySelectorAll('.embedded-project');
+            embeddedProjects.forEach((project, index) => {
+                project.style.opacity = '0';
+                project.style.transform = 'translateX(-20px)';
+                
+                setTimeout(() => {
+                    project.style.transition = 'all 0.6s ease';
+                    project.style.opacity = '1';
+                    project.style.transform = 'translateX(0)';
+                }, 1000 + (index * 300));
+            });
+        });
+    </script>
+</body>
+</html>
